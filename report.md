@@ -59,28 +59,23 @@ I was suprised by the results, specifically, how easy it was to achieve the goal
 
 We had expected to spend significant time tuning hyperparams and running on GPU instances, however, our MacBook Pro CPU completed the training in under 5 minutes.
 
-![plot](dqn.jpg)
+![raw scores](raw_scores_dqn.jpg)
+
+![average scores](average_scores_dqn.jpg)
 
 
 ```
-Episode 100	Average Score: 0.93
-Episode 200	Average Score: 3.67
-Episode 300	Average Score: 7.59
-Episode 400	Average Score: 9.93
-Episode 500	Average Score: 12.51
-Episode 600	Average Score: 14.62
-Episode 700	Average Score: 13.65
-Episode 800	Average Score: 14.25
-Episode 900	Average Score: 14.94
-Episode 1000	Average Score: 13.85
+Episode 100	Average Score: 1.02
+Episode 200	Average Score: 3.88
+Episode 300	Average Score: 6.90
+Episode 400	Average Score: 9.46
+Episode 500	Average Score: 12.33
+Episode 522	Average Score: 13.02
+Environment solved in 422 episodes!	Average Score: 13.02
 ```
 
-## Ideas for future work
+## Conclusion and Recommendations
 
-Overall, this environment was easily solved using a simple DQN DNN model with a very shallow configuration of layers. 
-
-I believe that implementation of Dueling DQNs or other enhancemnets to the standrad implementation would be overkill. 
-
-Rather than extend the DQN itself, we would be very interested in exploring how bayesian sampling could be used (Thompson Sampling) in the policy evaluation step rather than using a Epsilon Greedy approach. 
+Solving the task only required a shallow architecture as a task as simple as this would not require more complicated algorithms. However, Dueling DQN, Rainbow and other more advance implementations are still worth exploring as I have noticed that increasing the episodes did not do much to the learning. Maybe other approaches may also be explored other than the Epsilon Greedy approach. 
 
 
