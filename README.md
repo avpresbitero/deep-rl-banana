@@ -22,19 +22,20 @@ Just a word of advice. The current Unity ML-Agents environment only supports Pyt
 
 1. Clone this repository.
 2. Navigate to the project directory.
-3. 
+3. Type the following:
+
 ```shell
 $ conda create --name drl python=3.6
 ```
-4. 
+ 
 ```shell
 $ activate drl
 ```
-5. 
+ 
 ```shell
 cd python
 ```
-6. 
+ 
 ```shell
 pip3 install .
 ```
