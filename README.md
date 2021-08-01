@@ -18,7 +18,7 @@ The agent has four discrete actions to choose from:
 
 ### Installation
 
-Just a word of advice. The current Unity ML-Agents environment only supports Python 3.6. So the following steps need to be followed as well as the attached Python folder needs to be installed.  
+Just a word of advice. The current Unity ML-Agents environment only supports Python 3.6. So the following steps need to be followed as well as everything in the attached Python folder needs to be installed.  
 
 1. Clone this repository.
 2. Navigate to the project directory.
