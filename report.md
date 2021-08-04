@@ -1,6 +1,6 @@
 # Udacity Deep Reinforcement Learning 
 
-## Navigation Project Executuve Summary
+## Navigation Project Executive Summary
 
 Author: Alva Presbitero avpresbitero@gmail.com
 
@@ -28,12 +28,12 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 
 ### The Solution
 
-The learning algorithm I picked for this project is a vanilla Deep Q-Learning algorithm, based on Deep Mind's paper entitled "Human Level Control Through Deep Reinforcement Learning" publisjed in Nature back in February 2015. 
+The learning algorithm I picked for this project is a vanilla Deep Q-Learning algorithm, based on Deep Mind's paper entitled [Human Level Control Through Deep Reinforcement Learning](https://www.nature.com/articles/nature14236) published in Nature back in February 2015. 
 
 
 ### Model architecture
 
-I ventured into the simpler/shallower network configurations as often times, simple algrorithms achieve the desired results without compromising computational power. Hence, in this project, a 2-layer neural network was used (2 linear or fully connected layers) with input 37 and output 4. The architecture makes use of 64 and 128 neurons respectively.
+I ventured into the simpler/shallower network configurations as often times, simpler algrorithms achieve the desired results without compromising computational power. Hence, in this project, it would suffice to use a very simple 2-layer neural network was used (2 linear or fully connected layers) with input 37 and output 4. The architecture makes use of 64 and 128 neurons respectively.
 
 ```
 QNetwork(
@@ -45,7 +45,7 @@ QNetwork(
 
 ### Hyperparameters
 
-All hyper parameters were fixed during the testing. We had expected to need to "play" with these to optimise the solution, however, the training results were such that this was not needed. 
+The below hyperparameters were used to for the simulations. It would of course be interesting to play around with these hyperparameters, but the goal of the project was achieved by using the below values.
 
 * Replay buffer size 100,000 
 * Discount factor 0.99 (gamma)
@@ -53,29 +53,31 @@ All hyper parameters were fixed during the testing. We had expected to need to "
 * Learning rate 0.0004 (alpha)
 * Network update step interval 4
 
-## Results
+### Results
 
-I was suprised by the results, specifically, how easy it was to achieve the goal score with almost no modifications. The consistent solving of the problem when training, and the low number of episodes required, was not expected. 
+It was so interesting for me that a shallow vanilla implementation of the Deep Q-Learning algorithm was enough to solve the problem. Although of course, other more sophisticated algorithms may be used to achieve a higher score at lower runtime. But I think the current architecture I chose performed rather surprisingly well.
 
-We had expected to spend significant time tuning hyperparams and running on GPU instances, however, our MacBook Pro CPU completed the training in under 5 minutes.
+My laptop (ASUS Zenbook) CPU was enough to train the model. So cool!
 
 ![raw scores](raw_scores_dqn.jpg)
 
 ![average scores](average_scores_dqn.jpg)
 
-
 ```
-Episode 100	Average Score: 1.02
-Episode 200	Average Score: 3.88
-Episode 300	Average Score: 6.90
-Episode 400	Average Score: 9.46
-Episode 500	Average Score: 12.33
-Episode 522	Average Score: 13.02
-Environment solved in 422 episodes!	Average Score: 13.02
+QNetwork(
+  (fc1): Linear(in_features=37, out_features=64, bias=True)
+  (fc2): Linear(in_features=64, out_features=128, bias=True)
+  (out): Linear(in_features=128, out_features=4, bias=True)
+)
+Episode 100	Average Score: 0.93
+Episode 200	Average Score: 3.40
+Episode 300	Average Score: 7.58
+Episode 400	Average Score: 10.47
+Episode 500	Average Score: 13.01
 ```
 
-## Conclusion and Recommendations
+### Conclusion and Recommendations
 
 Solving the task only required a shallow architecture as a task as simple as this would not require more complicated algorithms. However, Dueling DQN, Rainbow and other more advance implementations are still worth exploring as I have noticed that increasing the episodes did not do much to the learning. Maybe other approaches may also be explored other than the Epsilon Greedy approach. 
 
-
+All in all, the vanilla Deep Q-Learning did a great job!
