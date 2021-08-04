@@ -6,9 +6,9 @@ This Navigation project with Udacity's [Deep Reinforcement Learning Nanodegree](
 
 For this project, I used the Deep Q-Leraning (DQN) to train an agent to selectively collect bananas in a two-dimensional space. This project uses a modified version of Unity's Banana Collector environment. The desired output or goal is for the agent to collect only the yellow bananas and avoid the blue bananas in the set environment.
 
-The environment has a state space of 37 dimensions including basic information about the agent and the "ray-based" perception of the objects it can see. Note - For this project, no trainning was undertaken based on pixel values. 
+The environment has a state space of 37 dimensions including basic information about the agent and the "ray-based" perception of the objects it can see. For this project, no trainning was undertaken based on pixel values. 
 
-The agent receives a reward of +1 for picking up a yellow banana and a -1 penalty/reward for picking up a blue banana. The environment is concsiderd solved when the agent receives an average score of +13 over 100 consecutive episodes. 
+The agent receives a reward of +1 for picking up a yellow banana and a -1 penalty/reward for picking up a blue banana. The environment is considerd solved when the agent receives an average score of +13 over 100 consecutive episodes. 
 
 The agent has four discrete actions to choose from:
 * 0 - Forward
