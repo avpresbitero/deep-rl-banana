@@ -57,4 +57,4 @@ In a terminal or command window, navigate to the main directory (that contains t
 ```shell
 $ jupyter notebook
 ```
-This opens the Jupyter Notebook. Navigate to the project and run the [Navigation.ipynb](https://github.com/avpresbitero/deep-rl-banana/blob/master/navigation.ipynb) to replicate the experiments.
+This opens the Jupyter Notebook. Navigate to the project and run the [Navigation.ipynb](https://github.com/avpresbitero/deep-rl-banana/blob/master/Navigation.ipynb) to replicate the experiments.
